@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nefeli Metallidou</title>
+  <style>
+    body {
+      font-family: Verdana;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #A15E49;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+	.project-section {
+	  margin-bottom: 2.5rem;
+	}
+
+	.project-section h3 {
+	  border-bottom: 2px solid #A15E49;
+	  padding-bottom: 0.3rem;
+	  margin-bottom: 1rem;
+	}
+
+	.projects {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	  gap: 1rem;
+	}
+
+	.project-card {
+	  background: #ffffff;
+	  padding: 1rem;
+	  border-radius: 12px;
+	  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	  border: 1px solid #e0e0e0;
+	  transition: transform 0.2s ease, box-shadow 0.2s ease;
+	  display: flex;
+	  flex-direction: column;
+	  overflow: hidden;
+	}
+
+	.project-card:hover {
+	  transform: translateY(-4px);
+	  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+	}
+
+	.project-image {
+	  width: 100%;
+	  height: auto;
+	  border-radius: 8px;
+	  margin-bottom: 1rem;
+	  object-fit: cover;
+	}
+
+	.project-content h4 {
+	  margin: 0 0 0.5rem;
+	  font-size: 1.1rem;
+	  color: #2c3e50;
+	}
+
+	.project-content p {
+	  font-size: 0.95rem;
+	  color: #555;
+	  margin-bottom: 1rem;
+	}
+
+	.project-link {
+	  color: #3498db;
+	  font-weight: bold;
+	  text-decoration: none;
+	}
+
+	.project-link:hover {
+	  text-decoration: underline;
+	}
+	
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+    a {
+      color: #CA895F;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nefeli Metallidou</h1>
+    <p></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I'm an Electrical and Computer Engineering graduate, with a passion for digital electronics and programming. Feel free to take a look at my projects below!
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+	
+	<!-- Digital section -->
+	<div class="project-section">
+		<h3>Digital ASICs, SoC</h3>
+		<div class="projects">
+			<div class="project-card">
+				<h4>Multi-clock STA of PicoRV32 with UART interface</h4>
+				<p>Physical design and Static Timing Analysis of a PicoRV32 processor combined with a UART interface using open source tools</p>
+				<p>Link coming soon</p>
+			 </div>
+			 <div class="project-card">
+				<h4>PicoRV32 Physical Design</h4>
+				<p>Physical design of a PicoRV32 processor, using Cadence Genus and Innovus.</p>
+				<a href="proj-picorv-physical.html">More</a> | <a href="https://github.com/nefelimet/picorv32-physical-design" target="_blank">GitHub</a>
+			 </div>
+			 <div class="project-card">
+				<h4>MIPS processor design in Verilog</h4>
+				<p>Design and verification of a simple MIPS processor in Verilog.</p>
+				<a href="proj-mips-verilog.html">More</a> | <a href="https://github.com/nefelimet/mips-verilog" target="_blank">GitHub</a>
+			 </div>
+			 <div class="project-card">
+				<h4>Up/down counter and synchronous FIFO design and verification in SystemVerilog</h4>
+				<p>Design and verification of an up/down counter and a synchronous FIFO memory in SystemVerilog.</p>
+				<a href="proj-systemverilog.html">More</a> | <a href="https://github.com/nefelimet/SystemVerilog-project" target="_blank">GitHub</a>
+			 </div>
+			 <div class="project-card">
+				<h4>Tiny Tapeout chip submission in IHP25b</h4>
+				<p>Design and verification of an up/down counter in Verilog, physical design using open source tools based on the Tiny Tapeout template.</p>
+				<a href="proj-tiny-tapeout.html">More</a> | <a href="https://github.com/nefelimet/tt-updown-counter" target="_blank">GitHub</a>
+			 </div>
+			 <div class="project-card">
+				<h4>Contribution to superscalar RISC-V CPU design in VHDL</h4>
+				<p>Contributing to the design and verification of a superscalar RISC-C processor in VHDL.</p>
+				<a href="proj-contrib-superscalar.html">More</a> | <a href="https://github.com/NoridelHerron/SUPERSCALAR_CPU" target="_blank">GitHub</a>
+			 </div>
+			<div class="project-card">
+				<h4>FD-SOI 90nm RISC-V processor</h4>
+				<p>Utilizing the SkyWater 90nm FD-SOI process</p>
+				<p>Link coming soon</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Analog section -->
+	<div class="project-section">
+		<h3>Analog ICs, PCBs, interposers</h3>
+		<div class="projects">
+			<div class="project-card">
+				<h4>Dynamic comparator design in Virtuoso</h4>
+				<p>Design of schematic and layout of a dynamic comparator in Cadence Virtuoso, including simulation results.</p>
+				<a href="proj-dyn-comp.html">More</a>
+			</div>
+			<div class="project-card">
+				<h4>SensorBoard</h4>
+				<p>Design of a PCB for UAV measurements. Includes the schematic and layout.</p>
+				<a href="proj-sensor-board.html">More</a>
+			</div>
+			<div class="project-card">
+				<h4>Avionics setup of a small UAV</h4>
+				<p>Setup of the Avionics equipment for a small-scale UAV, including batteries, motor, servomotors, ESC and radio control.</p>
+				<a href="proj-avionics.html">More</a>
+			</div>
+			<div class="project-card">
+				<h4>Silicon interposer design in GPDK45, signal integrity and power integrity simulations in HFSS</h4>
+				<p>Design of a passive silicon interposer with Virtuoso, along with signal and power integrity simulations in HFSS. Includes testing of different routing technologies (microstrip, coplanar waveguide, stripline), as well as Power Distribution Network design.</p>
+				<a href="proj-interposer.html">More</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- Other section -->
+	<div class="project-section">
+		<h3>Programming and embedded systems</h3>
+		<div class="projects">
+			<div class="project-card">
+				<h4>Arduino libraries & scripts</h4>
+				<p>Custom Arduino library for an ultrasonic sensor. Also includes small scripts for different sensors, LED projects etc.</p>
+				<a href="proj-arduino.html">More</a> | <a href="https://github.com/nefelimet/Arduino-Projects" target="_blank">GitHub</a>
+			</div>
+			<div class="project-card">
+				<h4>Serial communications in Java</h4>
+				<p>A program that communicated with a remote university server by sending request codes and receiving echo packets, images and GPS traces. Includes a ARQ mechanism for testing the validity of the packets.</p>
+				<a href="https://github.com/nefelimet/picorv32-physical-design" target="_blank">GitHub</a>
+			</div>
+			<div class="project-card">
+				<h4>Small programs in MIPS Assembly</h4>
+				<p>Some small programs in MIPS Assembly.</p>
+				<a href="proj-assembly.html">More</a>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      <a href="https://github.com/nefelimet" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/nefeli-metallidou" target="_blank">LinkedIn</a> |
+      <a href="mailto:met.nefeli@gmail.com">Email</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nefeli Metallidou</p>
+  </footer>
+
+</body>
+</html>
