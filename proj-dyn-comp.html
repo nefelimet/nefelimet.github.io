@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic comparator design in Virtuoso</title>
+  <style>
+    body {
+      font-family: Verdana;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #A15E49;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem 1rem 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      padding: 1rem 1rem 0;
+    }
+
+    .screenshot {
+		display: block;
+		margin: 1.5rem auto 1rem;
+		width: 60%;
+		max-width: 600px;
+		border-radius: 8px;
+}
+
+    p {
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      padding: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #CA895F;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dynamic comparator design in Virtuoso</h1>
+  </header>
+
+  <main>
+
+    <p>
+      This project is the design of a dynamic comparator in Virtuoso. It includes the schematic, as well as the layout and waveforms.
+    </p>
+	
+	<p>
+	  The schematic of the circuit can be seen below, along with the testbench schematic.
+	</p>
+	
+	<img src="images/dyncomp-schematic.png" alt="Screenshot of the schematic" class="screenshot" />
+	<img src="images/dyncomp-schematic-testbench.png" alt="Screenshot of the schematic testbench" class="screenshot" />
+
+    <p>
+      A transient simulation is set up in SPICE, to validate the waveforms. The values were set at VINP=0.2V, VINN=0.1V, and the clock has a period of 10us. At the high levels of the clock, the comparator is enabled, and VOUTP=VDD, VOUTN=0, since VINP>VINN. At the low levels of the clock, all outputs are 0. VOUTP does not reach levels VDD and GND fully.
+    </p>
+	
+	<img src="images/dyncomp-out1.png" alt="Screenshot of the output waveform" class="screenshot" />
+	<img src="images/dyncomp-out2.png" alt="Screenshot of the output waveform" class="screenshot" />
+	
+	<p>
+	  The layout is designed using the GPDK045 process, which is used for educational purposes and is not commercial. Metals 1 and 2 were used for routing, and via groups of 2 or 3 were used for redundancy.
+	</p>
+	
+	<img src="images/dyncomp-layout.png" alt="Screenshot of the layout" class="screenshot" />
+	
+	<div class="links">
+      <a href="index.html">← Back to Portfolio</a>
+    </div>
+	
+  </main>
+
+  <footer>
+    © 2025 Nefeli Metallidou
+  </footer>
+
+</body>
+</html>

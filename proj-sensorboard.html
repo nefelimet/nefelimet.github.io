@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SensorBoard</title>
+  <style>
+    body {
+      font-family: Verdana;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #A15E49;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem 1rem 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      padding: 1rem 1rem 0;
+    }
+
+    .screenshot {
+		display: block;
+		margin: 1.5rem auto 1rem;
+		width: 60%;
+		max-width: 600px;
+		border-radius: 8px;
+}
+
+    p {
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      padding: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #CA895F;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SensorBoard: a PCB for UAV measurements</h1>
+  </header>
+
+  <main>
+
+    <p>
+      SensorBoard is a PCB designed for storing UAV measurements, performed during my time in Aristotle Space and Aeronautics Team (ASAT). ASAT is a student team that designs and builds UAVs, that participate in student competitions, but also has research projects.
+    </p>
+	
+	<p>
+	  The PCB needed to take and transmit measurements of airspeed, altitude, position, ground speed, battery voltage, acceleration, orientation, temperature, and control surface deflection. All of this data is necessary for a UAV to store during its flight.
+	</p>
+	
+	<p>
+      An ST microcontroller is used for co-ordinating everything on the board. 4 main sensors are used to take measurements of the data needed: a BMP388 temperature and pressure sensor, an MPU6050 accelerometer and gyroscope, a GPS module combined with an antenna, and a differential pressure sensor connected to the UAV's Pitot tube. Voltage regulators are needed to ensure every component is working at its required voltage, and an SD card reader is used to safely store the data. A LoRa module transmits all data to the ground station.
+	</p>
+	
+	<img src="images/sensorboard-schematic.png" alt="Screenshot of the schematic" class="screenshot" />
+
+    <p>
+      A layout using 2 layers was designed in EasyEDA. Good design practices were used, such as routing traces at 45 degrees to eliminate noise, using thick traces for the high frequency signals, placing decoupling capacitors as close to the components as possible, and minimizing ground loops.
+	</p>
+	
+	<img src="images/sensorboard-layout.png" alt="Screenshot of the layout" class="screenshot" />
+	
+	<p>
+	  The board was manufactured and tested, and later connected to the ground station software for real-time monitoring of the flight data.
+	</p>
+	
+	<img src="images/sensorboard.png" alt="Image of the board" class="screenshot" />
+	<img src="images/sensorboard-gs.png" alt="Image of the board connected to the ground station" class="screenshot" />
+	
+	<div class="links">
+      <a href="index.html">← Back to Portfolio</a>
+    </div>
+	
+  </main>
+
+  <footer>
+    © 2025 Nefeli Metallidou
+  </footer>
+
+</body>
+</html>

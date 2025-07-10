@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avionics setup of a UAV</title>
+  <style>
+    body {
+      font-family: Verdana;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #A15E49;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem 1rem 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      padding: 1rem 1rem 0;
+    }
+
+    .screenshot {
+		display: block;
+		margin: 1.5rem auto 1rem;
+		width: 60%;
+		max-width: 600px;
+		border-radius: 8px;
+}
+
+    p {
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      padding: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #CA895F;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Avionics setup of a UAV</h1>
+  </header>
+
+  <main>
+
+    <p>
+      This project includes the Avionics setup of a small UAV, performed during my time in Aristotle Space and Aeronautics Team (ASAT). ASAT is a student team that designs and builds UAVs, that participate in student competitions, but also has research projects.
+    </p>
+	
+	<p>
+	  The UAVs designed and constructed are small UAVs, with a mission of carrying a specific payload. Some of the UAVs were used for testing, while others participated in payload competitions for student teams.
+	</p>
+	
+	<p>
+	  The UAV electrical system includes a motor and a main battery for propulsion. A 3-cell LiPo battery was used, operating at 11.1V. LiPo batteries are reliable and used extensibly in the UAV field. Parameters of the battery such as output voltage, capacity, discharge rate etc are considered when selecting the type of the battery.
+	</p>
+	
+	<p>
+      For the movement of the aircraft, control surfaces are used, which are deflected by servomotors placed on them. The servomotors are selected after calculating the maximum torque required for the deflection of each surface.
+	</p>
+	
+	<p>
+	  For the control of the UAV, an Electrical Speed Controller (ESC) is used. It is selected based on the maximum current it supports. An RC receiver is used to communicate with the pilot's control system.
+	</p>
+	
+	
+	<img src="images/avionics-uav.jpg" alt="Image of the UAV" class="screenshot" />
+
+	
+	<div class="links">
+      <a href="index.html">← Back to Portfolio</a>
+    </div>
+	
+  </main>
+
+  <footer>
+    © 2025 Nefeli Metallidou
+  </footer>
+
+</body>
+</html>
