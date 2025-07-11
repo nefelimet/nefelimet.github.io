@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silicon interposer design</title>
+  <style>
+    body {
+      font-family: Verdana;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #A15E49;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem 1rem 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      padding: 1rem 1rem 0;
+    }
+
+    .screenshot {
+		display: block;
+		margin: 1.5rem auto 1rem;
+		width: 60%;
+		max-width: 600px;
+		border-radius: 8px;
+}
+
+    p {
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+
+    .links {
+      padding: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #CA895F;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Silicon interposer design</h1>
+  </header>
+
+  <main>
+
+    <p>
+      During my master thesis, I designed a passive silicon interposer in Virtuoso, using the open GPDK45 technology. The interposer connects two test chiplets with 16 pins each, while 2 differential pairs are routed on the interposer. Different routing topologies where tried (microstrip, coplanar waveguide, stripline), and the design was simulated in HFSS 3D Layout. S parameters were extracted and compared, showcasing the advanced shielding offered by the coplanar topology.
+    </p>
+	
+    <p>
+      A power distribution network was also designed, in order to simulate power integrity performance. Power drop and ground bounce were calculated, and were found to be within the acceptable 10% limit.
+    </p>
+
+    <p>
+      Finally, assembly with the test chiplets was performed, and the new insertion loss was calculated.
+    </p>
+
+    <p>
+      The results of the thesis were also presented in the ETCEI 2024 conference in Volos, Greece. The conference was organized by HETIA and included papers, posters and talks on advanced electronics, system architecture and emerging technologies.
+    </p>
+	
+	<div class="links">
+      <a href="index.html">← Back to Portfolio</a>
+    </div>
+	
+  </main>
+
+  <footer>
+    © 2025 Nefeli Metallidou
+  </footer>
+
+</body>
+</html>
