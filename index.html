@@ -13,7 +13,7 @@
       padding: 0;
     }
     header {
-      background: #A15E49;
+      background: #442B48;
       color: white;
       padding: 2rem;
       text-align: center;
@@ -28,7 +28,7 @@
 	}
 
 	.project-section h3 {
-	  border-bottom: 2px solid #A15E49;
+	  border-bottom: 2px solid #442B48;
 	  padding-bottom: 0.3rem;
 	  margin-bottom: 1rem;
 	}
@@ -47,8 +47,8 @@
 	  border: 1px solid #e0e0e0;
 	  transition: transform 0.2s ease, box-shadow 0.2s ease;
 	  display: flex;
-	  flex-direction: column;
-	  overflow: hidden;
+      flex-direction: column;
+      justify-content: space-between;
 	}
 
 	.project-card:hover {
@@ -77,13 +77,46 @@
 	}
 
 	.project-link {
-	  color: #3498db;
+	  color: #98B06F;
 	  font-weight: bold;
 	  text-decoration: none;
 	}
 
 	.project-link:hover {
 	  text-decoration: underline;
+	}
+	
+	.project-buttons {
+	  display: flex;
+	  justify-content: flex-start;
+	  gap: 0.5rem;
+	  margin-top: 1rem;
+	  flex-wrap: wrap;
+	}
+
+	.btn {
+	  padding: 0.5rem 1rem;
+	  background-color: #98B06F;
+	  color: white;
+	  text-decoration: none;
+	  border-radius: 6px;
+	  font-weight: bold;
+	  font-size: 0.9rem;
+	  transition: background-color 0.2s ease;
+	}
+
+	.btn:hover {
+	  background-color: #B4DC6E;
+	}
+
+	.coming-soon {
+	  padding: 0.5rem 1rem;
+	  background-color: #6C646D;
+	  color: #fff;
+	  border-radius: 6px;
+	  font-size: 0.9rem;
+	  font-weight: bold;
+	  display: inline-block;
 	}
 	
     footer {
@@ -93,7 +126,7 @@
       margin-top: 2rem;
     }
     a {
-      color: #CA895F;
+      color: #726E60;
       text-decoration: none;
     }
   </style>
@@ -120,39 +153,71 @@
 		<h3>Digital ASICs, SoC</h3>
 		<div class="projects">
 			<div class="project-card">
-				<h4>Multi-clock STA of PicoRV32 with UART interface</h4>
-				<p>Physical design and Static Timing Analysis of a PicoRV32 processor combined with a UART interface using open source tools.</p>
-				<p>Link coming soon</p>
+				<div class="project-content">
+				  <h4>Multi-clock STA of PicoRV32 with UART interface</h4>
+				  <p>Physical design and Static Timing Analysis of a PicoRV32 processor combined with a UART interface using open source tools.</p>
+				</div>
+				<div class="project-buttons">
+				  <span class="coming-soon">Coming soon</span>
+				</div>
 			 </div>
 			 <div class="project-card">
-				<h4>PicoRV32 Physical Design</h4>
-				<p>Physical design of a PicoRV32 processor, using Cadence Genus and Innovus.</p>
-				<a href="proj-picorv-physical.html">More</a> | <a href="https://github.com/nefelimet/picorv32-physical-design" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>PicoRV32 Physical Design</h4>
+				  <p>Physical design of a PicoRV32 processor, using Cadence Genus and Innovus.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-picorv-physical.html" class="btn">More</a>
+				  <a href="https://github.com/nefelimet/picorv32-physical-design" class="btn" target="_blank">GitHub</a>
+				</div>
 			 </div>
 			 <div class="project-card">
-				<h4>MIPS processor design in Verilog</h4>
-				<p>Design and verification of a simple MIPS processor in Verilog.</p>
-				<a href="proj-mips-verilog.html">More</a> | <a href="https://github.com/nefelimet/mips-verilog" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>MIPS processor design in Verilog</h4>
+				  <p>Design and verification of a simple MIPS processor in Verilog.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-mips-verilog.html" class="btn">More</a>
+				  <a href="https://github.com/nefelimet/mips-verilog" class="btn" target="_blank">GitHub</a>
+				</div>
 			 </div>
 			 <div class="project-card">
-				<h4>Up/down counter and synchronous FIFO design and verification in SystemVerilog</h4>
-				<p>Design and verification of an up/down counter and a synchronous FIFO memory in SystemVerilog.</p>
-				<a href="proj-systemverilog.html">More</a> | <a href="https://github.com/nefelimet/SystemVerilog-project" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>Up/down counter and synchronous FIFO design and verification in SystemVerilog</h4>
+				  <p>Design and verification of an up/down counter and a synchronous FIFO memory in SystemVerilog.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-systemverilog.html" class="btn">More</a>
+				  <a href="https://github.com/nefelimet/SystemVerilog-project" class="btn" target="_blank">GitHub</a>
+				</div>
 			 </div>
 			 <div class="project-card">
-				<h4>Tiny Tapeout chip submission in IHP25b</h4>
-				<p>Design and verification of an up/down counter in Verilog, physical design using open source tools based on the Tiny Tapeout template.</p>
-				<a href="proj-tiny-tapeout.html">More</a> | <a href="https://github.com/nefelimet/tt-updown-counter" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>Tiny Tapeout chip submission in IHP25b</h4>
+				  <p>Design and verification of an up/down counter in Verilog, physical design using open source tools based on the Tiny Tapeout template.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-tiny-tapeout.html" class="btn">More</a>
+				  <a href="https://github.com/nefelimet/tt-updown-counter" class="btn" target="_blank">GitHub</a>
+				</div>
 			 </div>
 			 <div class="project-card">
-				<h4>Contribution to superscalar RISC-V CPU design in VHDL</h4>
-				<p>Contributing to the design and verification of a superscalar RISC-C processor in VHDL.</p>
-				<a href="proj-contrib-superscalar.html">More</a> | <a href="https://github.com/NoridelHerron/SUPERSCALAR_CPU" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>Contribution to superscalar RISC-V CPU design in VHDL</h4>
+				  <p>Contributing to the design and verification of a superscalar RISC-C processor in VHDL.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-contrib-superscalar.html" class="btn">More</a>
+				</div>
 			 </div>
 			<div class="project-card">
-				<h4>FD-SOI 90nm RISC-V processor</h4>
-				<p>Utilizing the SkyWater 90nm FD-SOI process for a processor design.</p>
-				<p>Link coming soon</p>
+				<div class="project-content">
+				  <h4>FD-SOI 90nm RISC-V processor</h4>
+				  <p>Utilizing the SkyWater 90nm FD-SOI process for a processor design.</p>
+				</div>
+				<div class="project-buttons">
+				  <span class="coming-soon">Coming soon</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -163,24 +228,40 @@
 		<h3>Analog ICs, PCBs, interposers</h3>
 		<div class="projects">
 			<div class="project-card">
-				<h4>Dynamic comparator design in Virtuoso</h4>
-				<p>Design of schematic and layout of a dynamic comparator in Cadence Virtuoso, including simulation results.</p>
-				<a href="proj-dyn-comp.html">More</a>
+				<div class="project-content">
+				  <h4>Dynamic comparator design in Virtuoso</h4>
+				  <p>Design of schematic and layout of a dynamic comparator in Cadence Virtuoso, including simulation results.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-dyn-comp.html" class="btn">More</a>
+				</div>
 			</div>
 			<div class="project-card">
-				<h4>SensorBoard</h4>
-				<p>Design of a PCB for UAV measurements. Includes the schematic and layout.</p>
-				<a href="proj-sensorboard.html">More</a>
+				<div class="project-content">
+				  <h4>SensorBoard</h4>
+				  <p>Design of a PCB for UAV measurements. Includes the schematic and layout.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-sensorboard.html" class="btn">More</a>
+				</div>
 			</div>
 			<div class="project-card">
-				<h4>Avionics setup of a small UAV</h4>
-				<p>Setup of the Avionics equipment for a small-scale UAV, including batteries, motor, servomotors, ESC and radio control.</p>
-				<a href="proj-avionics.html">More</a>
+				<div class="project-content">
+				  <h4>Avionics setup of a small UAV</h4>
+				  <p>Setup of the Avionics equipment for a small-scale UAV, including batteries, motor, servomotors, ESC and radio control.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-avionics.html" class="btn">More</a>
+				</div>
 			</div>
 			<div class="project-card">
-				<h4>Silicon interposer design in GPDK45, signal integrity and power integrity simulations in HFSS</h4>
-				<p>Design of a passive silicon interposer with Virtuoso, along with signal and power integrity simulations in HFSS. Includes testing of different routing technologies (microstrip, coplanar waveguide, stripline), as well as Power Distribution Network design.</p>
-				<a href="proj-interposer.html">More</a>
+				<div class="project-content">
+				  <h4>Silicon interposer design in GPDK45, signal integrity and power integrity simulations in HFSS</h4>
+				  <p>Design of a passive silicon interposer with Virtuoso, along with signal and power integrity simulations in HFSS. Includes testing of different routing technologies (microstrip, coplanar waveguide, stripline), as well as Power Distribution Network design.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-inteporser.html" class="btn">More</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -191,19 +272,31 @@
 		<h3>Programming and embedded systems</h3>
 		<div class="projects">
 			<div class="project-card">
-				<h4>Arduino libraries & scripts</h4>
-				<p>Custom Arduino library for an ultrasonic sensor. Also includes small scripts for different sensors, LED projects etc.</p>
-				<a href="https://github.com/nefelimet/Arduino-Projects" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>Arduino libraries & scripts</h4>
+				  <p>Custom Arduino library for an ultrasonic sensor. Also includes small scripts for different sensors, LED projects etc.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="https://github.com/nefelimet/Arduino-Projects" class="btn">GitHub</a>
+				</div>
 			</div>
 			<div class="project-card">
-				<h4>Serial communications in Java</h4>
-				<p>A program that communicated with a remote university server by sending request codes and receiving echo packets, images and GPS traces. Includes a ARQ mechanism for testing the validity of the packets.</p>
-				<a href="https://github.com/nefelimet/picorv32-physical-design" target="_blank">GitHub</a>
+				<div class="project-content">
+				  <h4>Serial communications in Java</h4>
+				  <p>A program that communicated with a remote university server by sending request codes and receiving echo packets, images and GPS traces. Includes a ARQ mechanism for testing the validity of the packets.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="https://github.com/nefelimet/JavaSerialComms" class="btn">GitHub</a>
+				</div>
 			</div>
 			<div class="project-card">
-				<h4>Small programs in MIPS Assembly</h4>
-				<p>Some small programs in MIPS Assembly.</p>
-				<a href="proj-assembly.html">More</a>
+				<div class="project-content">
+				  <h4>Small programs in MIPS Assembly</h4>
+				  <p>Some small programs in MIPS Assembly.</p>
+				</div>
+				<div class="project-buttons">
+				  <a href="proj-assembly.html" class="btn">More</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -215,11 +308,11 @@
 
   <section>
     <h2>Contact</h2>
-    <p>
-      <a href="https://github.com/nefelimet" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/nefeli-metallidou" target="_blank">LinkedIn</a> |
-      <a href="mailto:met.nefeli@gmail.com">Email</a>
-    </p>
+		<div class="project-buttons">
+		  <a href="https://github.com/nefelimet" class="btn">GitHub</a>
+		  <a href="https://linkedin.com/in/nefeli-metallidou" class="btn">LinkedIn</a>
+		  <a href="mailto:met.nefeli@gmail.com" class="btn">Email</a>
+		</div>
   </section>
 
   <footer>
