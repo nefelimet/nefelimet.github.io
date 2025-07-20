@@ -77,20 +77,66 @@
   <main>
 
     <p>
-      During my master thesis, I designed a passive silicon interposer in Virtuoso, using the open GPDK45 technology. The interposer connects two test chiplets with 16 pins each, while 2 differential pairs are routed on the interposer. Different routing topologies where tried (microstrip, coplanar waveguide, stripline), and the design was simulated in HFSS 3D Layout. S parameters were extracted and compared, showcasing the advanced shielding offered by the coplanar topology.
+      During my master thesis, I designed a passive silicon interposer in Virtuoso, using the open GPDK45 technology. The interposer connects two test chiplets with 16 pins each, while 2 differential pairs are routed on the interposer. Different routing topologies where tried (microstrip, coplanar waveguide, stripline), and the design was simulated in HFSS 3D Layout. S parameters were extracted and compared, showcasing the advanced shielding offered by the coplanar topology (reduced losses and crosstalk).
     </p>
 	
+	<img src="images/interposer.PNG" alt="Screenshot of the interposer layout" class="screenshot" />
+	<img src="images/interposer_il_comparison.png" alt="Screenshot of the insertion loss comparison" class="screenshot" />
+	
     <p>
-      A power distribution network was also designed, in order to simulate power integrity performance. Power drop and ground bounce were calculated, and were found to be within the acceptable 10% limit.
+      A power distribution network was also designed. The desired maximum resistance of the power network is calculated to be 20 Ohms, using the following formula for a maximum current of 1 mA, and a VDD of 1V. The ripple tolerance is set to be 10%.
+	</p>
+	
+	<img src="images/interposer_Z_target.png" alt="Screenshot of the Z target formula" class="screenshot" />
+	
+	<p>
+	  The resistance of the power network is found to be below 18 Ohms for all frequencies of interest. Thus, the target for resistance is met.
     </p>
+	
+	<img src="images/interposer_pdn_R.PNG" alt="Screenshot of the schematic" class="screenshot" />
+	
+	<p>
+	  The voltage drop and ground bounce is simulated using the schematic below. For a current of 5 mA, the voltage drop is still less than 10%.
+	</p>
+	
+	<img src="images/interposer_pdn_schematic.PNG" alt="Screenshot of the schematic" class="screenshot" />
+	<img src="images/interposer_pdn_VDD_5mA.png" alt="Screenshot of the waveform" class="screenshot" />
+	
+	<p>
+	  A parametric sweep was run to find the maximum current so that both the power drop and ground bounce are less than 10%.
+	</p>
+	
+	<img src="images/interposer_Imax_Vdrop.png" alt="Screenshot of the waveform" class="screenshot" />
+	<img src="images/interposer_Imax_GNDbounce.png" alt="Screenshot of the waveform" class="screenshot" />
+	
+	<p>
+	  The maximum current for die1 is 12.51 mA, and for die2 12.02 mA.
+	</p>
 
     <p>
-      Finally, assembly with the test chiplets was performed, and the new insertion loss was calculated.
+      Finally, assembly with the test chiplets was performed, and the new insertion loss was calculated. The eye diagram was constructed, with the circuit still passing the mask requirements.
+	</p>
+	
+	<img src="images/interp_chiplet_eye_diagram.png" alt="Screenshot of the eye diagram" class="screenshot" />
+	
+	<p>
+	  A circuit analysis was used to simulate delay and voltage overshoot at the die.
     </p>
+	
+	<img src="images/interp_chiplet_die1_V.png" alt="Screenshot of the voltage waveforms" class="screenshot" />
+	
+	When adding a termination resistor of 50 Ohm, the overshoot is minimized.
+	
+	<img src="images/interp_chiplet_circuit_R.PNG" alt="Screenshot of the schematic" class="screenshot" />
+	<img src="images/interp_chiplet_die1_V_termination.png" alt="Screenshot of the voltage waveforms with termination" class="screenshot" />
 
     <p>
       The results of the thesis were also presented in the ETCEI 2024 conference in Volos, Greece. The conference was organized by HETIA and included papers, posters and talks on advanced electronics, system architecture and emerging technologies.
     </p>
+	
+	<p>
+	  The thesis document in Greek can be found here: https://ikee.lib.auth.gr/record/356361/?ln=el.
+	</p>
 	
 	<div class="links">
       <a href="index.html">← Back to Portfolio</a>
