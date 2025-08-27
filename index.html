@@ -4,139 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nefeli Metallidou</title>
-  <style>
-    body {
-      font-family: Verdana;
-      background: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #442B48;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-	.project-section {
-	  margin-bottom: 2.5rem;
-	}
-
-	.project-section h3 {
-	  border-bottom: 2px solid #442B48;
-	  padding-bottom: 0.3rem;
-	  margin-bottom: 1rem;
-	}
-
-	.projects {
-	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	  gap: 1rem;
-	}
-
-	.project-card {
-	  background: #ffffff;
-	  padding: 1rem;
-	  border-radius: 12px;
-	  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-	  border: 1px solid #e0e0e0;
-	  transition: transform 0.2s ease, box-shadow 0.2s ease;
-	  display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-	}
-
-	.project-card:hover {
-	  transform: translateY(-4px);
-	  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-	}
-
-	.project-image {
-	  width: 100%;
-	  height: auto;
-	  border-radius: 8px;
-	  margin-bottom: 1rem;
-	  object-fit: cover;
-	}
-
-	.project-content h4 {
-	  margin: 0 0 0.5rem;
-	  font-size: 1.1rem;
-	  color: #2c3e50;
-	}
-
-	.project-content p {
-	  font-size: 0.95rem;
-	  color: #555;
-	  margin-bottom: 1rem;
-	}
-
-	.project-link {
-	  color: #98B06F;
-	  font-weight: bold;
-	  text-decoration: none;
-	}
-
-	.project-link:hover {
-	  text-decoration: underline;
-	}
-	
-	.project-buttons {
-	  display: flex;
-	  justify-content: flex-start;
-	  gap: 0.5rem;
-	  margin-top: 1rem;
-	  flex-wrap: wrap;
-	}
-
-	.btn {
-	  padding: 0.5rem 1rem;
-	  background-color: #98B06F;
-	  color: white;
-	  text-decoration: none;
-	  border-radius: 6px;
-	  font-weight: bold;
-	  font-size: 0.9rem;
-	  transition: background-color 0.2s ease;
-	}
-
-	.btn:hover {
-	  background-color: #B4DC6E;
-	}
-
-	.coming-soon {
-	  padding: 0.5rem 1rem;
-	  background-color: #6C646D;
-	  color: #fff;
-	  border-radius: 6px;
-	  font-size: 0.9rem;
-	  font-weight: bold;
-	  display: inline-block;
-	}
-	
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      margin-top: 2rem;
-    }
-    a {
-      color: #726E60;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <header>
+  <div class="cover-container">
+    <img src="images/cover.jpg" alt="Cover Image">
+	<div class="overlay"></div>
     <h1>Nefeli Metallidou</h1>
-    <p></p>
-  </header>
+  </div>
 
   <section>
     <h2>About Me</h2>
@@ -152,15 +27,6 @@
 	<div class="project-section">
 		<h3>Digital ASICs, SoC</h3>
 		<div class="projects">
-			<div class="project-card">
-				<div class="project-content">
-				  <h4>Multi-clock STA of PicoRV32 with UART interface</h4>
-				  <p>Physical design and Static Timing Analysis of a PicoRV32 processor combined with a UART interface using open source tools.</p>
-				</div>
-				<div class="project-buttons">
-				  <span class="coming-soon">Coming soon</span>
-				</div>
-			 </div>
 			 <div class="project-card">
 				<div class="project-content">
 				  <h4>PicoRV32 Physical Design</h4>
@@ -210,15 +76,6 @@
 				  <a href="proj-contrib-superscalar.html" class="btn">More</a>
 				</div>
 			 </div>
-			<div class="project-card">
-				<div class="project-content">
-				  <h4>FD-SOI 90nm RISC-V processor</h4>
-				  <p>Utilizing the SkyWater 90nm FD-SOI process for a processor design.</p>
-				</div>
-				<div class="project-buttons">
-				  <span class="coming-soon">Coming soon</span>
-				</div>
-			</div>
 		</div>
 	</div>
 	
@@ -260,7 +117,7 @@
 				  <p>Design of a passive silicon interposer with Virtuoso, along with signal and power integrity simulations in HFSS. Includes testing of different routing technologies (microstrip, coplanar waveguide, stripline), as well as Power Distribution Network design.</p>
 				</div>
 				<div class="project-buttons">
-				  <a href="proj-inteporser.html" class="btn">More</a>
+				  <a href="proj-interposer.html" class="btn">More</a>
 				</div>
 			</div>
 		</div>
